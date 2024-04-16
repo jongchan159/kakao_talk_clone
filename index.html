@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to kokoa Talk</title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span></div>
+        <div class="status-bar__column">
+            <span>98%</span>
+            <i class="fa-solid fa-battery-full"></i>
+            <i class="fa-solid fa-bolt-lightning"></i>
+        </div> 
+    </div>
+    
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to Kokoa Talk!</h1>
+        <p class="welcome-header__text">
+            If you have a Kokoa Account, log in with your e-mail or phone number.
+        </p>
+    </header> 
+
+    <form action="friends.html" method="get" id="login-form"> <!--GET은 보안에 취약하므로 ID password같은 정보가 아닌 url에 포함되어도 상관없는 정보만, 백엔드서버가 구현되어있다면 POST로-->
+        <input name="username" type="text" placeholder="Email or phone number">
+        <input name="password" type="password" placeholder="password">
+        <input type="submit" value="Log in">
+        <input type="submit" value="Sign up">
+    </form>
+    <a href="#">Find Kokoa Account or Pass</a>
+
+    <script src="https://kit.fontawesome.com/892e90a15e.js" crossorigin="anonymous"></script>
+</body>
+</html>

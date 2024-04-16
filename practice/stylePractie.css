@@ -1,0 +1,136 @@
+/* 
+blueTitle은 selector, selector은 가리키는 대상, 원하는 정보를 묶어둠
+중괄호로 묶기, .css확장자 파일에 적거나 html의 <style>태그 안에 적기
+cascading : 위에서 아래로 (=절차지향?)
+
+block 옆에 올 수 없음 ex <div>
+inline 옆에 올 수 있음 ex <span> -> 높이와 너비를 가질 수 없다
+display: 로 변경 가능
+
+박스 밖 공간 : margin
+경계 : border
+박스 안쪽 공간 : padding
+
+margin 위아래 양옆
+margin 위 오른쪽 아래 왼쪽 (시계방향)
+collapsing margin: div와 경계가 body의 경계와 같다면 하나의 마진으로 취급, 위아래에서만 나타나는 현상
+inline은 높이와 너비가 없기 때문에 마진을 가지지 않는다
+inline의 마진은 좌우만 적용되는 경우도 있음
+
+#id{~} 로 태그의 아이디 참조, #id1, #id2, .. 와 같이 연결 가능
+*{}는 전체
+.class 로 같은 클래스 참조
+클래스는 여러개를 가질 수 있다
+.btn {~} \n .tomato {~}
+<div class="btn tomato"> ~ <div/>
+
+inline block은 반응형이 아니다. 화면 크기에 지장을 받음 자유도 낮음 > Flexbox
+flexbox rules
+1. 자식 원소에 적지 않아야함, 부모 원소에만 명시해야함
+2. justify-content 주축(수평) 조정
+3. align-items로 교차축(수직) 조정
+4. 주축 교차축은 서로 변경 가능 > flex-direction(default : row)
+5. wrapping : 배정 방식 > flex-wrap
+
+px > pixel vh > viewpoint height 화면비율높이(퍼센트)
+
+position 
+fixed: 고정 static:  
+relative: 처음 놓인 자리를 기준으로 상화좌우 조정nabsolute: 가장 가까운 relative 부모를 기준로 이동
+
+pseudo selector
+div:~
+ex) div:last-child
+span:nth-child(2)
+span:nth-child(even)
+span:nth-child(2n+1)
+
+input[placeholder="username"]
+*= is 'contains' : 포함하기만 하면
+~= is 'exactly' : 앞뒤에 공백
+
+button:active - 마우스 클릭
+button:hover - 마우스가 대상 위에
+button:focus - 키보드로 선택됐을 때
+a.visited - 한번 접속하고난 후
+input::placeholder - placeholder만 바꿀 수 있게 해줌
+
+combinator
+p  span{ ... } 
+<p> 의 자식 <span>을 꾸밈
+div > span{ ... }
+<div>의 바로 밑 자식 <span>을 꾸밈
+p + span{ ... }
+p 바로 다음
+p ~ span{ ... }
+p와 형제인데 바로 뒤에 오지 않는 다음 span을 꾸밈
+
+:root {
+    --main-color: - 변수처럼 저장(--a-b 형식)
+}
+background-color: var(--main-color)
+
+// 고급
+Transition : 상태변화 애니메이션(서서히 바뀜)
+- state가 없는 요소에 붙음(hover 등)
+- transition: (element) (time) (how)
+ex) trasition: background-color 10s ease-in-out;
+ex) trasition: all 1s ease-in-out;
+matthewlein.com
+
+Transformation : 효과
+- 다른 원소에 영향을 미치지 않고 해당 엘리먼트만 영향
+ex) 다른 원소에 영향을 주지 않고 해당 엘리먼트만 이동시킬 때 사용
+- 여러 요소와 조합 가능
+ex) img:hover { transfrom: ~};
+
+Animations(지속적인 변화)
+@keyframes animationName{   // 함수 정의처럼 저장
+    from {
+        transform: ~
+    }
+    to {
+    }
+}
+
+@keyframes animationName{   // 함수 정의처럼 저장
+    0% {
+    }
+    50% {
+    }
+    100% {
+    }
+}
+
+img { animation: animationName 5s ease-in-out infinite; }
+
+Media Queries : 화면의 크기, 설정 감지(가로모드, 세로모드, 창크기 등) 조건을 추가할 수 있음
+@media screen and (max-width: 400px and orientation: landscape(가로)/portrait(세로)) {  // 스크린의 너비가 400px보다 작으면
+
+}
+
+*/
+
+/*
+div 하나를 정확히 가운데에 두는 방법
+
+.status-bar {
+    display:flex;
+    justify-content: center;
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+*/

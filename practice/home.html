@@ -1,0 +1,83 @@
+<!-- 
+    tag 모음
+    hn : 제목로 사용(n에 따라 폰트 크기 바뀜)
+    ul : unordered list, ol : ordered list
+    li : list item (list 안에 원소 지정)
+    a : anchor(링크달기)
+    img : image
+    form : 한 덩어리
+    div : content 구분 단위
+    header, main, footer > div로 대체 가능 but 구분 목적(semantic code를 위함 : 용도에 맞는 명확한 테그 사용)
+
+
+    attribute =""모음
+    href="" : 하이퍼링크 < a
+    target="_self(기본값)" : 링크 여는 방법 < a
+    src : 이미지 소스 < img
+    id : 고유식별값 (1tag 1id)
+    for : 같은 id값 반환
+
+    <head>안은 보이지 않음, 사이트의 부가적인 정보
+
+    meta : 보이지 않는 데이터 모음
+    -(attribute) content, name ...
+
+    // html, css, js 관련 검색어 뒤에 mdn을 붙이고 해당 사이트에서 찾아보는 것 추천
+    <tagname attribute="value" />
+-->
+
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <link rel="shortcut icon" size="16x16 32x32 64x64" href="">
+        <title>Home - My first Website</title>
+        <link href="/css/styles.css" rel="stylesheet" />
+        <!-- link:css -->
+        <style>
+            *{
+                
+            }
+            html{
+                background-color: blueviolet;
+            }
+            body{
+                height: 1000vh;
+                display: flex;
+                background-color: antiquewhite;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap-reverse;
+            }
+            div{
+                margin: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 100px;
+                background-color: tomato;
+                
+            }
+            span{
+                color: seagreen;
+            }
+            #diff {
+                position: fixed;
+                top: 5px;
+            }
+            .tomato{
+                background-color: tomato;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="description" content="This is my website"`>
+    </head>
+    <body>
+        <div>1</div>
+        <div id="diff">2</div>
+        <div>3</div>
+        <script src="https://kit.fontawesome.com/892e90a15e.js" crossorigin="anonymous"></script>
+        <!-- script는 항상 마지막에 -->
+    </body>
+</html>
