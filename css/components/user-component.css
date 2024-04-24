@@ -6,7 +6,10 @@
 .user-component__column:first-child{
     display: flex;
     align-items: center;
-    margin-top: 9px;  
+}
+
+.user-component__name{
+    color:black;
 }
 
 .user-component__profileimg-xl{
@@ -20,10 +23,16 @@
     font-weight: 600;
     font-size: 21px;
 }
-.user-component__status{
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 15px;
+
+.user-component__profileimg-l{
+    width: 70px;
+    height: 70px;
+    border-radius: 28px;
+    margin-right: 20px;
+}
+
+.user-component__name-l {
+    font-size: 20px;
 }
 
 .user-component__profileimg-sm{
@@ -37,6 +46,20 @@
     font-size: 20px;
 }
 
+.user-component__status{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+.user-component__time{
+    margin-bottom: 12px;
+    display: block;
+}
+
 .user-component__column:last-child{
     color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
